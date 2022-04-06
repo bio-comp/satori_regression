@@ -96,7 +96,8 @@ def parseArgs():
                         help="Input file prefix for the bed/text file and the corresponding fasta file (sequences).")
     parser.add_argument('hparamfile',type=str,
                         help='Name of the hyperparameters file to be used.')
-
+    parser.add_argument('-r', dest='regression', default=False,
+                        action='store_true', help="Regression model--continuous labels.")
     args = parser.parse_args()
 
     return args
